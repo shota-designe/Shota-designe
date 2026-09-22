@@ -5,8 +5,11 @@
     "canal": "email",
     "date": "2026-09-18",
     "expediteur": "julien.marchand@example.com",
-    "type_probleme": "Livraison/retard",
     "message_original": "Bonjour, j'ai commandé un casque audio il y a 12 jours (commande #48213) et le statut n'a pas bougé depuis 'en préparation'. Le site annonçait une livraison en 3-5 jours. Pouvez-vous me dire ce qu'il se passe ?",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Livraison/retard",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour,\n\nMerci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, j'ai commandé un casque audio il y a 12 jours (commande #48213) et le s... ».\n\n[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Livraison/retard.]\n\nCordialement,\nLe service client TechStore Pro"
   },
   {
@@ -15,8 +18,11 @@
     "canal": "avis_public",
     "date": "2026-09-19",
     "expediteur": "Sophie R. (avis Trustpilot)",
-    "type_probleme": "Produit défectueux",
     "message_original": "Deuxième commande et deuxième déception. Le vase reçu est fissuré, comme la dernière fois. J'ai l'impression que la qualité n'est plus au rendez-vous chez Lumina Déco, dommage.",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Produit défectueux",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour, merci d'avoir pris le temps de partager votre retour. Nous sommes sincèrement désolés pour la gêne occasionnée et nous prenons votre remarque très au sérieux. Afin de résoudre ce point rapidement et personnellement, pourriez-vous nous écrire directement par email ? Notre équipe s'engage à trouver une solution adaptée.\n\nL'équipe Lumina Déco"
   },
   {
@@ -25,8 +31,11 @@
     "canal": "email",
     "date": "2026-09-19",
     "expediteur": "amelie.dubois@example.com",
-    "type_probleme": "Annulation abonnement",
     "message_original": "Bonjour, je souhaite annuler mon abonnement au panier bio mensuel à partir du mois prochain. Comment dois-je procéder ?",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Annulation abonnement",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour,\n\nMerci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, je souhaite annuler mon abonnement au panier bio mensuel à partir du mo... ».\n\n[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Annulation abonnement.]\n\nCordialement,\nL'équipe Bio&Co"
   },
   {
@@ -35,8 +44,11 @@
     "canal": "avis_public",
     "date": "2026-09-20",
     "expediteur": "Marc L. (avis Google)",
-    "type_probleme": "Produit défectueux",
     "message_original": "Le chargeur reçu ne fonctionne pas du tout, la led ne s'allume même pas. Pour le prix c'est vraiment décevant.",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Produit défectueux",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour, merci d'avoir pris le temps de partager votre retour. Nous sommes sincèrement désolés pour la gêne occasionnée et nous prenons votre remarque très au sérieux. Afin de résoudre ce point rapidement et personnellement, pourriez-vous nous écrire directement par email ? Notre équipe s'engage à trouver une solution adaptée.\n\nLe service client TechStore Pro"
   },
   {
@@ -45,8 +57,11 @@
     "canal": "email",
     "date": "2026-09-20",
     "expediteur": "amelie.dubois@example.com",
-    "type_probleme": "Réclamation répétée (relance)",
     "message_original": "Je reviens vers vous car je n'ai toujours pas eu de réponse à mon message d'il y a 5 jours concernant le remboursement de ma commande abîmée pendant le transport. C'est la deuxième fois que je vous écris sans réponse.",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Réclamation répétée (relance)",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour,\n\nMerci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Je reviens vers vous car je n'ai toujours pas eu de réponse à mon message d'il y... ».\n\n[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Réclamation répétée (relance).]\n\nCordialement,\nL'équipe Bio&Co"
   },
   {
@@ -55,8 +70,56 @@
     "canal": "email",
     "date": "2026-09-21",
     "expediteur": "contact.pro@example.com",
-    "type_probleme": "Question générale",
     "message_original": "Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pièces (professionnels) ? Merci d'avance.",
+    "escalade": false,
+    "signaux_escalade": [],
+    "type_probleme": "Question générale",
+    "statut": "en_attente_approbation",
     "brouillon": "Bonjour,\n\nMerci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pi... ».\n\n[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Question générale.]\n\nCordialement,\nL'équipe Lumina Déco"
+  },
+  {
+    "id": "msg_007",
+    "client": "TechStore Pro",
+    "canal": "email",
+    "date": "2026-09-21",
+    "expediteur": "d.rousseau@example.com",
+    "message_original": "Cette situation devient inacceptable. Si je n'ai pas de remboursement sous 48h, je transmets le dossier à mon avocat et j'engage une action en justice contre TechStore Pro.",
+    "escalade": true,
+    "signaux_escalade": [
+      "Menace juridique / litige"
+    ],
+    "type_probleme": "Remboursement/retour",
+    "statut": "a_traiter_par_humain",
+    "brouillon": null
+  },
+  {
+    "id": "msg_008",
+    "client": "Lumina Déco",
+    "canal": "email",
+    "date": "2026-09-21",
+    "expediteur": "celine.morvan@example.com",
+    "message_original": "Bonjour, ma commande de 850€ (meuble sur-mesure) est en retard de plus de 3 semaines, pouvez-vous me dire où elle en est ?",
+    "escalade": true,
+    "signaux_escalade": [
+      "Montant élevé"
+    ],
+    "type_probleme": "Livraison/retard",
+    "statut": "a_traiter_par_humain",
+    "brouillon": null
+  },
+  {
+    "id": "msg_009",
+    "client": "Bio&Co",
+    "canal": "avis_public",
+    "date": "2026-09-22",
+    "expediteur": "Karim T. (avis Google)",
+    "message_original": "J'ai fait un chargeback auprès de ma banque car cette entreprise m'a clairement volé mon argent, la commande n'est jamais arrivée.",
+    "escalade": true,
+    "signaux_escalade": [
+      "Fraude suspectée"
+    ],
+    "type_probleme": "Autre",
+    "statut": "a_traiter_par_humain",
+    "brouillon": null
   }
 ]

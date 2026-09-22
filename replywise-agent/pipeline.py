@@ -47,6 +47,15 @@ INDICES_RELANCE = [
     "encore une fois",
 ]
 
+# Libellés des signaux d'escalade (repris tels quels dans pending_queue.json).
+SIGNAL_JURIDIQUE = "Menace juridique / litige"
+SIGNAL_MONTANT = "Montant élevé"
+SIGNAL_CONTACT_REPETE = "Contact répété non résolu"
+SIGNAL_FRAUDE = "Fraude suspectée"
+SIGNAL_COLERE = "Colère extrême / menace d'exposition publique"
+
+SEUIL_MONTANT_ELEVE = 300  # en euros, seuil arbitraire pour le prototype
+
 
 def charger_json(chemin):
     with open(chemin, "r", encoding="utf-8") as f:
@@ -87,6 +96,54 @@ def deduire_categorie(message):
         return "Question générale"
 
     return "Autre"
+
+
+def _contient_montant_eleve(texte):
+    """Cherche un montant en euros dans le texte et renvoie True s'il
+    dépasse SEUIL_MONTANT_ELEVE (détection simple, pas de NLP)."""
+    montants = re.findall(r"(\d{1,3}(?:[ .]?\d{3})*)\s?(?:€|euros?)", texte)
+    for montant in montants:
+        valeur = int(montant.replace(" ", "").replace(".", ""))
+        if valeur >= SEUIL_MONTANT_ELEVE:
+            return True
+    return False
+
+
+def detecter_escalade(message_text):
+    """Repère les signaux qui indiquent qu'un ticket doit être traité par
+    un humain plutôt que par l'IA seule. Renvoie la liste des libellés de
+    signaux détectés (liste vide si aucun signal ne se déclenche)."""
+    texte = message_text.lower()
+    signaux = []
+
+    if re.search(r"avocat|tribunal|plainte|poursuite|litige|action en justice|mise en demeure", texte):
+        signaux.append(SIGNAL_JURIDIQUE)
+
+    if _contient_montant_eleve(texte):
+        signaux.append(SIGNAL_MONTANT)
+
+    if re.search(
+        r"3e fois|3ème fois|troisième fois|4e fois|4ème fois|quatrième fois|"
+        r"encore une fois|toujours pas de réponse depuis",
+        texte,
+    ):
+        signaux.append(SIGNAL_CONTACT_REPETE)
+
+    if re.search(
+        r"chargeback|contestation de paiement|contest\w* le paiement|"
+        r"escroquerie|arnaque|vous m'avez volé|c'est du vol",
+        texte,
+    ):
+        signaux.append(SIGNAL_FRAUDE)
+
+    if re.search(
+        r"tout le monde|réseaux sociaux|dénonc\w*|balancer partout|"
+        r"honte à vous|scandaleux|inadmissible",
+        texte,
+    ):
+        signaux.append(SIGNAL_COLERE)
+
+    return signaux
 
 
 def build_prompt(message, profil_client, canal):
@@ -192,19 +249,35 @@ def appeler_ia(prompt, message, profil_client, canal):
 def traiter_message(message, profils):
     profil_client = profils[message["client_id"]]
     canal = message.get("canal", "email")
-    prompt = build_prompt(message, profil_client, canal)
-    resultat_ia = appeler_ia(prompt, message, profil_client, canal)
 
-    return {
+    entree = {
         "id": message["id"],
         "client": profil_client["nom_entreprise"],
         "canal": canal,
         "date": message.get("date", ""),
         "expediteur": message.get("expediteur", ""),
-        "type_probleme": resultat_ia["type_probleme"],
         "message_original": message["message"],
-        "brouillon": resultat_ia["brouillon"],
     }
+
+    signaux = detecter_escalade(message["message"])
+    entree["escalade"] = bool(signaux)
+    entree["signaux_escalade"] = signaux
+
+    if signaux:
+        # Escalade : on ne génère aucun brouillon IA, on se contente d'un
+        # signalement clair pour qu'un humain reprenne la main.
+        entree["type_probleme"] = deduire_categorie(message)
+        entree["statut"] = "a_traiter_par_humain"
+        entree["brouillon"] = None
+        return entree
+
+    prompt = build_prompt(message, profil_client, canal)
+    resultat_ia = appeler_ia(prompt, message, profil_client, canal)
+
+    entree["type_probleme"] = resultat_ia["type_probleme"]
+    entree["statut"] = "en_attente_approbation"
+    entree["brouillon"] = resultat_ia["brouillon"]
+    return entree
 
 
 def main():
@@ -215,16 +288,23 @@ def main():
     messages = charger_messages()
 
     file_attente = []
+    nb_escalades = 0
     for message in messages:
         entree = traiter_message(message, profils)
         file_attente.append(entree)
-        print(f"[{entree['canal']:^12}] {entree['client']} -> {entree['type_probleme']}")
+        if entree["escalade"]:
+            nb_escalades += 1
+            statut_affiche = "ESCALADE -> humain (" + ", ".join(entree["signaux_escalade"]) + ")"
+        else:
+            statut_affiche = "brouillon généré"
+        print(f"[{entree['canal']:^12}] {entree['client']} -> {entree['type_probleme']} [{statut_affiche}]")
 
     with open(FICHIER_QUEUE, "w", encoding="utf-8") as f:
         json.dump(file_attente, f, ensure_ascii=False, indent=2)
 
     print("-" * 60)
-    print(f"{len(file_attente)} brouillon(s) écrit(s) dans {FICHIER_QUEUE.name}")
+    print(f"{len(file_attente)} ticket(s) écrit(s) dans {FICHIER_QUEUE.name} "
+          f"({nb_escalades} escalade(s), {len(file_attente) - nb_escalades} brouillon(s))")
 
 
 if __name__ == "__main__":

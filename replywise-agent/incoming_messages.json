@@ -47,5 +47,29 @@
     "date": "2026-09-21",
     "expediteur": "contact.pro@example.com",
     "message": "Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pièces (professionnels) ? Merci d'avance."
+  },
+  {
+    "id": "msg_007",
+    "client_id": "techstore_pro",
+    "canal": "email",
+    "date": "2026-09-21",
+    "expediteur": "d.rousseau@example.com",
+    "message": "Cette situation devient inacceptable. Si je n'ai pas de remboursement sous 48h, je transmets le dossier à mon avocat et j'engage une action en justice contre TechStore Pro."
+  },
+  {
+    "id": "msg_008",
+    "client_id": "boutique_lumina",
+    "canal": "email",
+    "date": "2026-09-21",
+    "expediteur": "celine.morvan@example.com",
+    "message": "Bonjour, ma commande de 850€ (meuble sur-mesure) est en retard de plus de 3 semaines, pouvez-vous me dire où elle en est ?"
+  },
+  {
+    "id": "msg_009",
+    "client_id": "bio_and_co",
+    "canal": "avis_public",
+    "date": "2026-09-22",
+    "expediteur": "Karim T. (avis Google)",
+    "message": "J'ai fait un chargeback auprès de ma banque car cette entreprise m'a clairement volé mon argent, la commande n'est jamais arrivée."
   }
 ]

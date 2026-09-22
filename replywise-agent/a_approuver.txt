@@ -1,10 +1,11 @@
-6 brouillon(s) en attente de validation
+9 ticket(s) en attente (3 escalade(s) à traiter par un humain, 6 brouillon(s) à valider)
 
 Brouillon #1 - msg_001
 ============================================================
 Client        : TechStore Pro
 Canal         : email
 Catégorie     : Livraison/retard
+Statut        : en_attente_approbation
 Expéditeur    : julien.marchand@example.com
 Date          : 2026-09-18
 
@@ -28,6 +29,7 @@ Brouillon #2 - msg_002
 Client        : Lumina Déco
 Canal         : avis_public
 Catégorie     : Produit défectueux
+Statut        : en_attente_approbation
 Expéditeur    : Sophie R. (avis Trustpilot)
 Date          : 2026-09-19
 
@@ -46,6 +48,7 @@ Brouillon #3 - msg_003
 Client        : Bio&Co
 Canal         : email
 Catégorie     : Annulation abonnement
+Statut        : en_attente_approbation
 Expéditeur    : amelie.dubois@example.com
 Date          : 2026-09-19
 
@@ -69,6 +72,7 @@ Brouillon #4 - msg_004
 Client        : TechStore Pro
 Canal         : avis_public
 Catégorie     : Produit défectueux
+Statut        : en_attente_approbation
 Expéditeur    : Marc L. (avis Google)
 Date          : 2026-09-20
 
@@ -87,6 +91,7 @@ Brouillon #5 - msg_005
 Client        : Bio&Co
 Canal         : email
 Catégorie     : Réclamation répétée (relance)
+Statut        : en_attente_approbation
 Expéditeur    : amelie.dubois@example.com
 Date          : 2026-09-20
 
@@ -110,6 +115,7 @@ Brouillon #6 - msg_006
 Client        : Lumina Déco
 Canal         : email
 Catégorie     : Question générale
+Statut        : en_attente_approbation
 Expéditeur    : contact.pro@example.com
 Date          : 2026-09-21
 
@@ -125,3 +131,57 @@ Merci de nous avoir contactés. Nous avons bien pris connaissance de votre messa
 
 Cordialement,
 L'équipe Lumina Déco
+
+------------------------------------------------------------
+
+[ESCALADE - À TRAITER PAR UN HUMAIN] #7 - msg_007
+============================================================
+Client        : TechStore Pro
+Canal         : email
+Catégorie     : Remboursement/retour
+Statut        : a_traiter_par_humain
+Expéditeur    : d.rousseau@example.com
+Date          : 2026-09-21
+Signaux       : Menace juridique / litige
+
+--- Message original ---
+Cette situation devient inacceptable. Si je n'ai pas de remboursement sous 48h, je transmets le dossier à mon avocat et j'engage une action en justice contre TechStore Pro.
+
+--- Brouillon ---
+Aucun brouillon généré : ce ticket nécessite une prise en charge humaine.
+
+------------------------------------------------------------
+
+[ESCALADE - À TRAITER PAR UN HUMAIN] #8 - msg_008
+============================================================
+Client        : Lumina Déco
+Canal         : email
+Catégorie     : Livraison/retard
+Statut        : a_traiter_par_humain
+Expéditeur    : celine.morvan@example.com
+Date          : 2026-09-21
+Signaux       : Montant élevé
+
+--- Message original ---
+Bonjour, ma commande de 850€ (meuble sur-mesure) est en retard de plus de 3 semaines, pouvez-vous me dire où elle en est ?
+
+--- Brouillon ---
+Aucun brouillon généré : ce ticket nécessite une prise en charge humaine.
+
+------------------------------------------------------------
+
+[ESCALADE - À TRAITER PAR UN HUMAIN] #9 - msg_009
+============================================================
+Client        : Bio&Co
+Canal         : avis_public
+Catégorie     : Autre
+Statut        : a_traiter_par_humain
+Expéditeur    : Karim T. (avis Google)
+Date          : 2026-09-22
+Signaux       : Fraude suspectée
+
+--- Message original ---
+J'ai fait un chargeback auprès de ma banque car cette entreprise m'a clairement volé mon argent, la commande n'est jamais arrivée.
+
+--- Brouillon ---
+Aucun brouillon généré : ce ticket nécessite une prise en charge humaine.
