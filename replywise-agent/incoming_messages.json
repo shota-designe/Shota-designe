@@ -1,0 +1,51 @@
+[
+  {
+    "id": "msg_001",
+    "client_id": "techstore_pro",
+    "canal": "email",
+    "date": "2026-09-18",
+    "expediteur": "julien.marchand@example.com",
+    "message": "Bonjour, j'ai commandé un casque audio il y a 12 jours (commande #48213) et le statut n'a pas bougé depuis 'en préparation'. Le site annonçait une livraison en 3-5 jours. Pouvez-vous me dire ce qu'il se passe ?"
+  },
+  {
+    "id": "msg_002",
+    "client_id": "boutique_lumina",
+    "canal": "avis_public",
+    "date": "2026-09-19",
+    "expediteur": "Sophie R. (avis Trustpilot)",
+    "message": "Deuxième commande et deuxième déception. Le vase reçu est fissuré, comme la dernière fois. J'ai l'impression que la qualité n'est plus au rendez-vous chez Lumina Déco, dommage."
+  },
+  {
+    "id": "msg_003",
+    "client_id": "bio_and_co",
+    "canal": "email",
+    "date": "2026-09-19",
+    "expediteur": "amelie.dubois@example.com",
+    "message": "Bonjour, je souhaite annuler mon abonnement au panier bio mensuel à partir du mois prochain. Comment dois-je procéder ?"
+  },
+  {
+    "id": "msg_004",
+    "client_id": "techstore_pro",
+    "canal": "avis_public",
+    "date": "2026-09-20",
+    "expediteur": "Marc L. (avis Google)",
+    "message": "Le chargeur reçu ne fonctionne pas du tout, la led ne s'allume même pas. Pour le prix c'est vraiment décevant."
+  },
+  {
+    "id": "msg_005",
+    "client_id": "bio_and_co",
+    "canal": "email",
+    "date": "2026-09-20",
+    "expediteur": "amelie.dubois@example.com",
+    "message": "Je reviens vers vous car je n'ai toujours pas eu de réponse à mon message d'il y a 5 jours concernant le remboursement de ma commande abîmée pendant le transport. C'est la deuxième fois que je vous écris sans réponse.",
+    "historique_client": "reclamation_precedente_sans_reponse"
+  },
+  {
+    "id": "msg_006",
+    "client_id": "boutique_lumina",
+    "canal": "email",
+    "date": "2026-09-21",
+    "expediteur": "contact.pro@example.com",
+    "message": "Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pièces (professionnels) ? Merci d'avance."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "boutique_lumina": {
+    "nom_entreprise": "Lumina Déco",
+    "secteur": "Décoration d'intérieur",
+    "ton": "chaleureux, familier, quelques emojis discrets autorisés",
+    "signature": "L'équipe Lumina Déco",
+    "consignes_specifiques": "Toujours proposer un geste commercial (code promo) en cas d'erreur de notre part."
+  },
+  "techstore_pro": {
+    "nom_entreprise": "TechStore Pro",
+    "secteur": "Électronique",
+    "ton": "professionnel, précis, orienté solution, pas d'emojis",
+    "signature": "Le service client TechStore Pro",
+    "consignes_specifiques": "Toujours donner un numéro de suivi ou une prochaine étape concrète."
+  },
+  "bio_and_co": {
+    "nom_entreprise": "Bio&Co",
+    "secteur": "Alimentation bio",
+    "ton": "bienveillant, rassurant, met en avant les valeurs écoresponsables de la marque",
+    "signature": "L'équipe Bio&Co",
+    "consignes_specifiques": "Rappeler la politique de remboursement sans condition en cas de produit périmé ou défectueux."
+  }
+}

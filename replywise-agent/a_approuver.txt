@@ -1,0 +1,127 @@
+6 brouillon(s) en attente de validation
+
+Brouillon #1 - msg_001
+============================================================
+Client        : TechStore Pro
+Canal         : email
+Catégorie     : Livraison/retard
+Expéditeur    : julien.marchand@example.com
+Date          : 2026-09-18
+
+--- Message original ---
+Bonjour, j'ai commandé un casque audio il y a 12 jours (commande #48213) et le statut n'a pas bougé depuis 'en préparation'. Le site annonçait une livraison en 3-5 jours. Pouvez-vous me dire ce qu'il se passe ?
+
+--- Brouillon proposé ---
+Bonjour,
+
+Merci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, j'ai commandé un casque audio il y a 12 jours (commande #48213) et le s... ».
+
+[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Livraison/retard.]
+
+Cordialement,
+Le service client TechStore Pro
+
+------------------------------------------------------------
+
+Brouillon #2 - msg_002
+============================================================
+Client        : Lumina Déco
+Canal         : avis_public
+Catégorie     : Produit défectueux
+Expéditeur    : Sophie R. (avis Trustpilot)
+Date          : 2026-09-19
+
+--- Message original ---
+Deuxième commande et deuxième déception. Le vase reçu est fissuré, comme la dernière fois. J'ai l'impression que la qualité n'est plus au rendez-vous chez Lumina Déco, dommage.
+
+--- Brouillon proposé ---
+Bonjour, merci d'avoir pris le temps de partager votre retour. Nous sommes sincèrement désolés pour la gêne occasionnée et nous prenons votre remarque très au sérieux. Afin de résoudre ce point rapidement et personnellement, pourriez-vous nous écrire directement par email ? Notre équipe s'engage à trouver une solution adaptée.
+
+L'équipe Lumina Déco
+
+------------------------------------------------------------
+
+Brouillon #3 - msg_003
+============================================================
+Client        : Bio&Co
+Canal         : email
+Catégorie     : Annulation abonnement
+Expéditeur    : amelie.dubois@example.com
+Date          : 2026-09-19
+
+--- Message original ---
+Bonjour, je souhaite annuler mon abonnement au panier bio mensuel à partir du mois prochain. Comment dois-je procéder ?
+
+--- Brouillon proposé ---
+Bonjour,
+
+Merci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, je souhaite annuler mon abonnement au panier bio mensuel à partir du mo... ».
+
+[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Annulation abonnement.]
+
+Cordialement,
+L'équipe Bio&Co
+
+------------------------------------------------------------
+
+Brouillon #4 - msg_004
+============================================================
+Client        : TechStore Pro
+Canal         : avis_public
+Catégorie     : Produit défectueux
+Expéditeur    : Marc L. (avis Google)
+Date          : 2026-09-20
+
+--- Message original ---
+Le chargeur reçu ne fonctionne pas du tout, la led ne s'allume même pas. Pour le prix c'est vraiment décevant.
+
+--- Brouillon proposé ---
+Bonjour, merci d'avoir pris le temps de partager votre retour. Nous sommes sincèrement désolés pour la gêne occasionnée et nous prenons votre remarque très au sérieux. Afin de résoudre ce point rapidement et personnellement, pourriez-vous nous écrire directement par email ? Notre équipe s'engage à trouver une solution adaptée.
+
+Le service client TechStore Pro
+
+------------------------------------------------------------
+
+Brouillon #5 - msg_005
+============================================================
+Client        : Bio&Co
+Canal         : email
+Catégorie     : Réclamation répétée (relance)
+Expéditeur    : amelie.dubois@example.com
+Date          : 2026-09-20
+
+--- Message original ---
+Je reviens vers vous car je n'ai toujours pas eu de réponse à mon message d'il y a 5 jours concernant le remboursement de ma commande abîmée pendant le transport. C'est la deuxième fois que je vous écris sans réponse.
+
+--- Brouillon proposé ---
+Bonjour,
+
+Merci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Je reviens vers vous car je n'ai toujours pas eu de réponse à mon message d'il y... ».
+
+[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Réclamation répétée (relance).]
+
+Cordialement,
+L'équipe Bio&Co
+
+------------------------------------------------------------
+
+Brouillon #6 - msg_006
+============================================================
+Client        : Lumina Déco
+Canal         : email
+Catégorie     : Question générale
+Expéditeur    : contact.pro@example.com
+Date          : 2026-09-21
+
+--- Message original ---
+Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pièces (professionnels) ? Merci d'avance.
+
+--- Brouillon proposé ---
+Bonjour,
+
+Merci de nous avoir contactés. Nous avons bien pris connaissance de votre message concernant : « Bonjour, proposez-vous des tarifs dégressifs pour les commandes de plus de 50 pi... ».
+
+[Réponse simulée - mode MOCK, aucune clé API Anthropic configurée. Catégorie détectée : Question générale.]
+
+Cordialement,
+L'équipe Lumina Déco
